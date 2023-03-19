@@ -1,0 +1,25 @@
+--Create a store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, cost INTEGER, available INTEGER, sold INTEGER);
+
+INSERT INTO store VALUES (1, "shirt", 10, 5, 3);
+INSERT INTO store VALUES (2, "pants", 20, 10, 5);
+INSERT INTO store VALUES (3, "socks", 5, 15, 4);
+INSERT INTO store VALUES (4, "hat", 10, 5, 1);
+INSERT INTO store VALUES (5, "sweater", 30, 3, 5);
+INSERT INTO store VALUES (6, "hoodie", 40, 1, 0);
+INSERT INTO store VALUES (7, "tank top", 10, 3, 4);
+INSERT INTO store VALUES (8, "leggings", 7, 10, 10);
+INSERT INTO store VALUES (9, "long sleeve", 15, 5, 5);
+INSERT INTO store VALUES (10, "dresses", 20, 7, 3);
+INSERT INTO store VALUES (11, "skirts", 12, 4, 5);
+INSERT INTO store VALUES (12, "suits", 50, 3, 1);
+INSERT INTO store VALUES (13, "earrings", 8, 3, 3);
+INSERT INTO store VALUES (14, "scarves", 9, 4, 10);
+INSERT INTO store VALUES (15, "shoes", 25, 5, 6);
+
+--display database ordered by cost of item
+SELECT * FROM store ORDER BY cost;
+
+--total number of items available within store
+SELECT SUM (available) FROM store;
